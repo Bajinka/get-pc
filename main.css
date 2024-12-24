@@ -1,0 +1,19 @@
+.main_name{
+    color: rgb(247, 253, 254);
+}
+.about_me{
+    font-size: 2rem;
+    color: rgb(78, 182, 182);
+}
+.me_about{
+    color: rgb(60, 13, 248);
+    border-top-left-radius: solid black;
+
+}
+.my_image{
+   
+    padding-bottom: 20px;
+    width: 50%;
+
+    
+}

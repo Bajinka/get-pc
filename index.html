@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET-PC Computer Services</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes slide {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+        }
+
+        .main_name {
+            animation: bounce 2s infinite, slide 2s infinite;
+        }
+
+        header img {
+            animation: bounce 2s infinite alternate, slide 2s infinite alternate;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: rgb(157, 205, 35);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        .contact-info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            text-align: left;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .service {
+            background-color: white;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .gallery {
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+        }
+        .slide img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+       
+        <h1 class="main_name">GET-PC TECHNICAL SOLUTION</h1>
+        <img class="my_image " src="/images/logo.png" alt="Omar's Logo" style="width: 180px;">
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container" id="about">
+        <h2 class="me_about">About Me</h2>
+        <p class="about_me ">Hi, I'm Omar, a dedicated computer technician offering a wide range of IT solutions including repair and  maintenance, graphic design, web development, and computer literacy training. <br>I am passionate about helping businesses and individuals harness technology effectively.</p>
+        
+    </div>
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <img src="computer_repair.jpg" alt="Computer Repair">
+                <h3>Computer Repair and Maintenance</h3>
+                <p>Providing reliable repair and maintenance for all your computing needs.</p>
+            </div>
+            <div class="service">
+                <img src="graphic_design.jpg" alt="Graphic Design">
+                <h3>Graphic Design</h3>
+                <p>Creating stunning visuals to enhance your brand identity.</p>
+            </div>
+            <div class="service">
+                <img src="web_development.jpg" alt="Web Development">
+                <h3>Web and Database Development</h3>
+                <p>Building modern, responsive websites and managing databases efficiently.</p>
+            </div>
+            <div class="service">
+                <img src="computer_training.jpg" alt="Computer Training">
+                <h3>Computer Literacy Training</h3>
+                <p>Empowering individuals with essential computer skills.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <div class="slideshow-container">
+                <div class="slide">
+                    <img src="work1.jpg" alt="Previous Work 1">
+                </div>
+                <div class="slide">
+                    <img src="work2.jpg" alt="Previous Work 2">
+                </div>
+                <div class="slide">
+                    <img src="work3.jpg" alt="Previous Work 3">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <footer>
+        <p>Connect with us:</p>
+        <p>
+            <a href="#" style="color: white;">Facebook</a> |
+            <a href="#" style="color: white;">Twitter</a> |
+            <a href="#" style="color: white;">LinkedIn</a>
+        </p>
+        <p>&copy; 2024 Omar's Computer Services. All rights reserved.</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex > document.getElementsByClassName("slide").length) {
+                slideIndex = 1;
+            }
+            if (slideIndex < 1) {
+                slideIndex = document.getElementsByClassName("slide").length;
+            }
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
