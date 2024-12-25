@@ -24,7 +24,18 @@
             }
         }
 
-        .main_name {
+        .main_name { animation: bounce 2s infinite, slide 2s infinite;
+        font-size: 2.5rem; /* Adjust the font size as needed */
+        text-align: center;
+        padding: 1rem;
+        background: linear-gradient(90deg, red, rgb(230, 208, 208), blue, green);
+        border-radius: 15px;
+        border: 5px solid;
+        border-image: linear-gradient(90deg, red, white, blue,white green) 1;
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                     0 0 20px rgba(255, 255, 255, 0.6),
+                     0 0 30px rgba(255, 255, 255, 0.4);
             animation: bounce 2s infinite, slide 2s infinite;
         }
 
@@ -45,6 +56,12 @@
             padding: 1rem;
             text-align: center;
             position: relative;
+            background: url('./images/clear\ logo_black\ bg.jpg') repeat center; 
+    background-size: contain; /* Adjust to fit the header area */
+    padding: 2rem; /* Add padding for better spacing */
+    color: white;
+    text-align: center;
+    position: relative;
         }
         .contact-info {
             position: absolute;
@@ -168,15 +185,65 @@
                 grid-template-columns: 1fr;
             }
         }
+        .contact-info {
+    position: absolute;
+    top: 30px; /* Adjusted from 10px to 30px */
+    left: 10px;
+    font-size: 0.9rem; /* Maintain readability */
+    color: white;
+    line-height: 1.4;
+}
+
+.contact-info {
+    position: absolute; /* Keep it at the top-left by default */
+    top: 30px; /* Adjust spacing */
+    left: 10px;
+    font-size: 0.9rem; 
+    color: white;
+    line-height: 1.4;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .contact-info {
+        position: static; /* Flow below header content */
+        margin-top: 1rem;
+        margin-bottom: 1rem; /* Add spacing below */
+        text-align: center; /* Center the contact details */
+        position: absolute;
+        top: 30px; /* Adjusted from 10px to 30px */
+        left: 100px;
+       margin-top: 300px;
+        font-size: 1rem; /* Maintain readability */
+        color: white;
+        line-height: 1.8;
+       
+      
+    }
+
+    header {
+        padding-bottom: 2rem; /* Add padding to separate header content */
+    }
+}
+
+
+
     </style>
 </head>
 <body>
     <header>
-       
-        <h1 class="main_name">GET-PC TECHNICAL SOLUTION</h1>
-        <img class="my_image " src="/images/logo.png" alt="Omar's Logo" style="width: 180px;">
+        <h1 class="main_name"> <span class="get"></span>GET-PC</span> TECHNICAL SOLUTION</h1>
+        <img class="my_image" src="/images/logo.png" alt="Get-Pcs Logo" style="width: 180px;">
+        <div class="contact-info">
+            <p class="tel"><strong>Phone:</strong> +1 234 567 890</p>
+            <p class="mail"><strong>Email:</strong> info@getpcservices.com</p>
+        </div>
     </header>
-    <nav>
+    
+    
+    
+   
+ <nav>
         <a href="#about">About Me</a>
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
@@ -191,22 +258,22 @@
         <h2>Our Services</h2>
         <div class="services">
             <div class="service">
-                <img src="computer_repair.jpg" alt="Computer Repair">
+                <img src="/images/computer_repair.jpg.webp" alt="Computer Repair">
                 <h3>Computer Repair and Maintenance</h3>
                 <p>Providing reliable repair and maintenance for all your computing needs.</p>
             </div>
             <div class="service">
-                <img src="graphic_design.jpg" alt="Graphic Design">
+                <img src="/images/graphic_design.jpg.jpg" alt="Graphic Design">
                 <h3>Graphic Design</h3>
                 <p>Creating stunning visuals to enhance your brand identity.</p>
             </div>
             <div class="service">
-                <img src="web_development.jpg" alt="Web Development">
+                <img src="/images/web_development.jpg.jpeg" alt="Web Development">
                 <h3>Web and Database Development</h3>
                 <p>Building modern, responsive websites and managing databases efficiently.</p>
             </div>
             <div class="service">
-                <img src="computer_training.jpg" alt="Computer Training">
+                <img src="/images/computer_training.jpg.webp" alt="Computer Training">
                 <h3>Computer Literacy Training</h3>
                 <p>Empowering individuals with essential computer skills.</p>
             </div>
